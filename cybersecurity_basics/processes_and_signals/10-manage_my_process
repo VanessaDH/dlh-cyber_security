@@ -16,7 +16,7 @@ case "$1" in
 		kill "$(cat /tmp/my_process.pid)"
 		rm -f /tmp/my_process.pid
 		./manage_my_process &
-		echo $! > /tmp/my_process.pid
+		echo " $!" > /tmp/my_process.pid
 		echo "manage_my_process restarted"
 		;;
 	*)
