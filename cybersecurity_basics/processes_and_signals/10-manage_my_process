@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 #Manage the manage_my_process script
-
 case "$1" in
 	start)
 		./manage_my_process &
@@ -16,7 +15,6 @@ case "$1" in
 		;;
 	restart)
 		kill "$(cat var/run/my_process.pid)"
-		pkill -f manage_my_process
 		rm -f var/run/my_process.pid
 		rm -f /tmp/my_process.pid
 		./manage_my_process &
