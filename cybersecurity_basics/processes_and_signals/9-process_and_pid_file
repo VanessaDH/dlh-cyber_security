@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+#Create PID file and handles SIGTERM SIGINT and SIGQUIT signals
+
+
 cleanup(){
 	rm -f /tmp/myscript.pid
 	exit
