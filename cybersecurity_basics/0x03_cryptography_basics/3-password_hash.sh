@@ -1,4 +1,2 @@
 #!/bin/bash
-salt=$(openssl rand -base64 16)
-combined="$1$sal"
-echo -n "$combined" | openssl dgst -sha512
+salt=$(openssl rand -base64 16) && echo -n "$1$sal" | openssl dgst -sha512 > 3_hash.txt
