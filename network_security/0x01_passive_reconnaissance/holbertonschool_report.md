@@ -112,3 +112,13 @@ Three load-balanced AWS eu-west-3 (Paris) instances serve `apply.holbertonschool
 
 **6. TLS hygiene is good**  
 All subdomains with Shodan data show TLSv1.2 + TLSv1.3 only. SSLv2, SSLv3, TLSv1.0, TLSv1.1 are all disabled across the board.
+
+### Reverse Proxies & Web Servers Detected
+
+| Subdomain | Reverse Proxy | Web Server |
+|-----------|--------------|------------|
+| www.holbertonschool.com | Cloudflare | Cloudflare |
+| blog.holbertonschool.com | nginx | nginx |
+| support.holbertonschool.com | nginx (via Cloudflare) | nginx |
+| assets.holbertonschool.com | Amazon CloudFront | Amazon CloudFront |
+| mail.holbertonschool.com | Amazon CloudFront | Microsoft HTTPAPI 2.0 |
