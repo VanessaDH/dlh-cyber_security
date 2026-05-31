@@ -10,15 +10,7 @@ def dns_recon(domain):
 	except socket.gaierror:
 		print(f"	IP ADDRESS: Failed to resolve")
 
-	try:
-		mx_records = dns.resolver.resolve(domain, dns.rdatatype.MX)
-		for r in mx_records:
-			print(f"	MX Record:	{r.exchange}")
-	except Exception:
-		print(f"	MX Records: None found")
-	
 def web_recon(domain):
-
 	try:
 		response = requests.get(f"http://{domain}", timeout=5)
 		print(f"	Status Code: {response.status_code}")
