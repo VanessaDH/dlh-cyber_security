@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import socket
 import requests
-import dns.resolver
 from bs4 import BeautifulSoup
 
 def dns_recon(domain):
