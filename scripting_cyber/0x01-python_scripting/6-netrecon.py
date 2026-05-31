@@ -3,6 +3,11 @@ import socket
 import requests
 from bs4 import BeautifulSoup
 
+try:
+	import dns.resolver
+except ImportError:
+	pass
+	
 def dns_recon(domain):
 	try:
 		ip = socket.gethostbyname(domain)
