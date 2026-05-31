@@ -10,7 +10,7 @@ def query_dns_records(domain_name):
 		try:
 			answers = dns.resolver.resolve(domain_name, record_type)
 			results[record_type] = answers
-		except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN, dns.resolver.NoNameservers):
+		except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN, dns.resolver.NoNameservers,dns.rdatatype.UnknownRdatatype):
 			pass
 			
 	return results	
