@@ -15,14 +15,14 @@ def web_recon(domain):
 		response = requests.get(f"http://{domain}", timeout=5)
 		print(f"	Status Code: {response.status_code}")
 		
-		for key in ['Server','Content-TYpe','X-Frame-Options']:
+		for key in ['Server','Content-Type','X-Frame-Options']:
 			if key in response.headers:
 				print(f"	{key}: {response.headers[key]}")
 				
 		soup = BeautifulSoup(response.text, 'html.parser')
 		print(f"	Links Found: {len(soup.find_all('a',href=True))}")
 	except requests.exceptions.RequestException as e:
-		printf(f"	Error: {e}")
+		print(f"	Error: {e}")
 
 def port_scan(domain):
 
