@@ -1,0 +1,21 @@
+reading from file Downloads/task3-dns-analysis.pcap, link-type IPV4 (Raw IPv4), snapshot length 65535
+18:27:59.972944 IP 172.16.0.20.54321 > 1.1.1.1.53: 0+ A? malicious-site.com. (36)
+18:27:59.973410 IP 1.1.1.1.53 > 172.16.0.20.54321: 0- 1/0/0 A 192.0.2.100 (70)
+18:27:59.974075 IP 172.16.0.20.54322 > 1.1.1.1.53: 0+ A? legitimate-site.org. (37)
+18:27:59.974421 IP 1.1.1.1.53 > 172.16.0.20.54322: 0- 1/0/0 A 198.51.100.50 (72)
+
+----------------------------------------------------------------------------------------
+reading from file Downloads/task3-dns-analysis.pcap, link-type IPV4 (Raw IPv4), snapshot length 65535
+18:27:59.972944 IP 172.16.0.20.54321 > 1.1.1.1.53: 0+ A? malicious-site.com. (36)
+18:27:59.974075 IP 172.16.0.20.54322 > 1.1.1.1.53: 0+ A? legitimate-site.org. (37)
+
+----------------------------------------------------------------------------------------
+reading from file Downloads/task3-dns-analysis.pcap, link-type IPV4 (Raw IPv4), snapshot length 65535
+18:27:59.972944 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto UDP (17), length 64)
+172.16.0.20.54321 > one.one.one.one.domain: 0+ A? malicious-site.com. (36)
+18:27:59.973410 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto UDP (17), length 98)
+one.one.one.one.domain > 172.16.0.20.54321: 0- 1/0/0 malicious-site.com. A 192.0.2.100 (70)
+18:27:59.974075 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto UDP (17), length 65)
+172.16.0.20.54322 > one.one.one.one.domain: 0+ A? legitimate-site.org. (37)
+18:27:59.974421 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto UDP (17), length 100)
+one.one.one.one.domain > 172.16.0.20.54322: 0- 1/0/0 legitimate-site.org. A 198.51.100.50 (72)
