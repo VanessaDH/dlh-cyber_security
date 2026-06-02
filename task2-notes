@@ -1,0 +1,29 @@
+reading from file Downloads/task2-http-analysis.pcap, link-type IPV4 (Raw IPv4), snapshot length 65535
+18:27:59.971150 IP 10.0.0.50.45678 > 203.0.113.10.80: Flags [P.], seq 0:67, ack 0, win 8192, length 67: HTTP: GET /login HTTP/1.1
+E..k....@.4P
+..2..q
+.n.P........P. .....GET /login HTTP/1.1
+Host: example.com
+User-Agent: Mozilla/5.0
+
+
+18:27:59.971494 IP 10.0.0.50.45678 > 203.0.113.10.80: Flags [P.], seq 0:116, ack 1, win 8192, length 116: HTTP: POST /api/auth HTTP/1.1
+E.......@.4.
+..2..q
+.n.P........P. .....POST /api/auth HTTP/1.1
+Host: example.com
+Authorization: Basic YWRtaW46U2VjdXJlUGFzczEyMyE=
+Content-Length: 0
+
+
+18:27:59.971731 IP 203.0.113.10.80 > 10.0.0.50.45678: Flags [P.], seq 1:39, ack 0, win 8192, length 38: HTTP: HTTP/1.1 200 OK
+E..N....@.4m..q
+
+..2.P.n........P. .....HTTP/1.1 200 OK
+Content-Length: 0
+
+-----------------------------------------------------
+reading from file Downloads/task2-http-analysis.pcap, link-type IPV4 (Raw IPv4), snapshot length 65535
+Authorization: Basic YWRtaW46U2VjdXJlUGFzczEyMyE=
+------------------------------------------------------
+
