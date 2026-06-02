@@ -1,0 +1,27 @@
+reading from file Downloads/task4-tcp-analysis.pcap, link-type IPV4 (Raw IPv4), snapshot length 65535
+18:27:59.976681 IP 192.168.10.5.50000 > 203.0.113.20.8080: Flags [S], seq 1000, win 8192, length 0
+18:27:59.976824 IP 203.0.113.20.8080 > 192.168.10.5.50000: Flags [S.], seq 2000, ack 1001, win 8192, length 0
+18:27:59.976951 IP 192.168.10.5.50000 > 203.0.113.20.8080: Flags [.], ack 1, win 8192, length 0
+18:27:59.977073 IP 192.168.10.5.50000 > 203.0.113.20.8080: Flags [P.], seq 1:14, ack 4294965296, win 8192, length 13: HTTP
+18:27:59.977348 IP 192.168.10.5.50000 > 203.0.113.20.8080: Flags [F.], seq 15, ack 1, win 8192, length 0
+18:27:59.977469 IP 203.0.113.20.8080 > 192.168.10.5.50000: Flags [F.], seq 1, ack 16, win 8192, length 0
+18:27:59.977589 IP 192.168.10.5.50000 > 203.0.113.20.8080: Flags [.], ack 2, win 8192, length 0
+---------------------------------------------------------------------------------------------------
+reading from file Downloads/task4-tcp-analysis.pcap, link-type IPV4 (Raw IPv4), snapshot length 65535
+18:27:59.976681 IP 192.168.10.5.50000 > 203.0.113.20.8080: Flags [S], seq 1000, win 8192, length 0
+18:27:59.976824 IP 203.0.113.20.8080 > 192.168.10.5.50000: Flags [S.], seq 2000, ack 1001, win 8192, length 0
+18:27:59.976951 IP 192.168.10.5.50000 > 203.0.113.20.8080: Flags [.], ack 1, win 8192, length 0
+18:27:59.977073 IP 192.168.10.5.50000 > 203.0.113.20.8080: Flags [P.], seq 1:14, ack 4294965296, win 8192, length 13: HTTP
+18:27:59.977348 IP 192.168.10.5.50000 > 203.0.113.20.8080: Flags [F.], seq 15, ack 1, win 8192, length 0
+18:27:59.977469 IP 203.0.113.20.8080 > 192.168.10.5.50000: Flags [F.], seq 1, ack 16, win 8192, length 0
+18:27:59.977589 IP 192.168.10.5.50000 > 203.0.113.20.8080: Flags [.], ack 2, win 8192, length 0
+-----------------------------------------------------------------------------------------------------
+reading from file Downloads/task4-tcp-analysis.pcap, link-type IPV4 (Raw IPv4), snapshot length 65535
+-----------------------------------------------------------------------------------------------------
+└──╼ $tcpdump -r Downloads/task4-tcp-analysis.pcap -nn 'tcp' | grep -i "\[S\]" | wc -l
+reading from file Downloads/task4-tcp-analysis.pcap, link-type IPV4 (Raw IPv4), snapshot length 65535
+1
+┌─[user@parrot]─[~]
+└──╼ $tcpdump -r Downloads/task4-tcp-analysis.pcap -nn 'tcp' | grep -i "\[F\]" | wc -l
+reading from file Downloads/task4-tcp-analysis.pcap, link-type IPV4 (Raw IPv4), snapshot length 65535
+0
