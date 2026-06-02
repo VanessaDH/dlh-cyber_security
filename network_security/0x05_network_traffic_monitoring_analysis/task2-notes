@@ -27,3 +27,5 @@ reading from file Downloads/task2-http-analysis.pcap, link-type IPV4 (Raw IPv4),
 Authorization: Basic YWRtaW46U2VjdXJlUGFzczEyMyE=
 ------------------------------------------------------
 
+echo YWRtaW46U2VjdXJlUGFzczEyMyE= | base64 -d
+
