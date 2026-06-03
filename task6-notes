@@ -1,0 +1,56 @@
+All TCP packets
+
+reading from file Downloads/task5-advanced-filtering.pcap, link-type IPV4 (Raw IPv4), snapshot length 65535
+18:15:08.030612 IP 10.1.1.50.40001 > 203.0.113.5.80: Flags [P.], seq 0:28, ack 0, win 8192, length 28: HTTP: GET /index.html HTTP/1.1
+18:15:08.031021 IP 10.1.1.50.40002 > 203.0.113.5.443: Flags [S], seq 0, win 8192, length 0
+18:15:08.032193 IP 10.1.1.50.40003 > 203.0.113.15.21: Flags [P.], seq 0:14, ack 0, win 8192, length 14: FTP: USER ftpuser
+18:15:08.032593 IP 10.1.1.50.40003 > 203.0.113.15.21: Flags [P.], seq 0:21, ack 1, win 8192, length 21: FTP: PASS SecretFTP2024!
+18:15:08.033052 IP 10.1.1.50.40004 > 203.0.113.5.80: Flags [P.], seq 0:28, ack 0, win 8192, length 28: HTTP: GET /about.html HTTP/1.1
+
+---------------------------------------
+Read the Full Packet Data
+
+reading from file Downloads/task5-advanced-filtering.pcap, link-type IPV4 (Raw IPv4), snapshot length 65535
+18:15:08.030612 IP 10.1.1.50.40001 > 203.0.113.5.80: Flags [P.], seq 0:28, ack 0, win 8192, length 28: HTTP: GET /index.html HTTP/1.1
+E..D....@.3{
+..2..q..A.P........P. ..)..GET /index.html HTTP/1.1
+
+
+18:15:08.031021 IP 10.1.1.50.40002 > 203.0.113.5.443: Flags [S], seq 0, win 8192, length 0
+E..(....@.3.
+..2..q..B..........P. .....
+18:15:08.032193 IP 10.1.1.50.40003 > 203.0.113.15.21: Flags [P.], seq 0:14, ack 0, win 8192, length 14: FTP: USER ftpuser
+E..6....@.3.
+..2..q..C..........P. .....USER ftpuser
+
+18:15:08.032593 IP 10.1.1.50.40003 > 203.0.113.15.21: Flags [P.], seq 0:21, ack 1, win 8192, length 21: FTP: PASS SecretFTP2024!
+E..=....@.3x
+..2..q..C..........P. ..c..PASS SecretFTP2024!
+
+18:15:08.033052 IP 10.1.1.50.40004 > 203.0.113.5.80: Flags [P.], seq 0:28, ack 0, win 8192, length 28: HTTP: GET /about.html HTTP/1.1
+E..D....@.3{
+..2..q..D.P........P. ..'..GET /about.html HTTP/1.1
+
+-------------------------------------------------------------
+Filter data packets with payload
+
+reading from file Downloads/task5-advanced-filtering.pcap, link-type IPV4 (Raw IPv4), snapshot length 65535
+18:15:08.030612 IP 10.1.1.50.40001 > 203.0.113.5.80: Flags [P.], seq 0:28, ack 0, win 8192, length 28: HTTP: GET /index.html HTTP/1.1
+E..D....@.3{
+..2..q..A.P........P. ..)..GET /index.html HTTP/1.1
+
+
+E..(....@.3.
+..2..q..B..........P. .....
+18:15:08.032193 IP 10.1.1.50.40003 > 203.0.113.15.21: Flags [P.], seq 0:14, ack 0, win 8192, length 14: FTP: USER ftpuser
+E..6....@.3.
+..2..q..C..........P. .....USER ftpuser
+
+18:15:08.032593 IP 10.1.1.50.40003 > 203.0.113.15.21: Flags [P.], seq 0:21, ack 1, win 8192, length 21: FTP: PASS SecretFTP2024!
+E..=....@.3x
+..2..q..C..........P. ..c..PASS SecretFTP2024!
+
+18:15:08.033052 IP 10.1.1.50.40004 > 203.0.113.5.80: Flags [P.], seq 0:28, ack 0, win 8192, length 28: HTTP: GET /about.html HTTP/1.1
+E..D....@.3{
+..2..q..D.P........P. ..'..GET /about.html HTTP/1.1
+
