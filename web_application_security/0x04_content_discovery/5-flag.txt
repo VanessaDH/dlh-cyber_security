@@ -1,1 +1,1 @@
-"Holberton Sec Lab - FLAG: 0a854af6a881e9505f75f53f9c02d0ed"
+0a854af6a881e9505f75f53f9c02d0ed
