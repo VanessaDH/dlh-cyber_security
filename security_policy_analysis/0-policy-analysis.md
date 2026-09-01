@@ -1,17 +1,5 @@
 # Task 0 — Policy Analysis
 
-## Sample Policy Under Review
-
-> **SECURITY POLICY**
-> All employees should use good passwords. Don't share them.
-> IT will handle security stuff.
-> Report problems to someone.
-> *Updated: Sometime last year*
-
-The document above is 4 sentences long, contains no verifiable requirement, and cannot be audited, enforced, or measured. The analysis below identifies what is missing (Part A), what is defective in the language that *is* present (Part B), and delivers a compliant replacement (Part C).
-
----
-
 ## Part A — Missing Components
 
 | Missing Component | Why It's Important |
